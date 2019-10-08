@@ -29,5 +29,11 @@ namespace JobBoards.Controllers
             List<JobBoard> allItems = JobBoard.GetAll();
             return View(allItems);
         }
+        [HttpPost("/listings/delete")]
+        public ActionResult DeleteAll()
+        {
+            JobBoard.ClearAll();
+            return View();
+        }
     }
 }

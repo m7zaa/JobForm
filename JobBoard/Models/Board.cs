@@ -12,6 +12,7 @@ namespace JobBoards.Models
         public string NameOfContactee {get; set;}
         public string ContactEmail {get; set;}
         public string ContactPhone {get; set;}
+        public int Id { get; }
 
         private static List<JobBoard> _instances = new List<JobBoard>{};
 
@@ -24,10 +25,15 @@ namespace JobBoards.Models
             ContactEmail = contactEmail;
             ContactPhone = contactPhone;
             _instances.Add(this);
+            Id = _instances.Count();
         }
         public static List<JobBoard> GetAll()
         {
             return _instances;
+        }
+        public static void ClearAll()
+        {
+            _instances.Clear();
         }
     }
 }
