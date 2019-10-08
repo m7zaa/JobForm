@@ -21,6 +21,7 @@ namespace JobBoards.Tests
 
             //Act
             int result = newJobBoard.Id;
+            System.Console.WriteLine(newJobBoard.Id);
 
             //Assert
             Assert.AreEqual(1, result);

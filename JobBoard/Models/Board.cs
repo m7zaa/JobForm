@@ -25,7 +25,7 @@ namespace JobBoards.Models
             ContactEmail = contactEmail;
             ContactPhone = contactPhone;
             _instances.Add(this);
-            Id = _instances.Count();
+            Id = _instances.Count;
         }
         public static List<JobBoard> GetAll()
         {
