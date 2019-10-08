@@ -1,0 +1,11 @@
+@using JobBoards.Models;
+
+<h1>Job Openings</h1>
+<ul> @foreach (JobBoard job in Model)
+    {
+        <li>@job.JobTitle, @job.CompanyName, @job.JobDescription, @job.NameOfContactee, @job.ContactEmail, @job.ContactPhone</li>
+    }
+</ul>
+<a href="/listings/new">Make another job listing</a>
+<br>
+<a href="/">Return to Homepage</a>
